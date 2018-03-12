@@ -1,5 +1,5 @@
 {
-  "name": "vue-fs-app-project",
+  "name": "vuevuetifyfirebaseapp",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "prateek951 <prince.cenation@gmail.com>",
@@ -10,9 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "tachyons": "^4.9.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.0.6"
+    "vuetify": "^1.0.6",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

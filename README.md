@@ -1,4 +1,4 @@
-# vue-fs-app-project
+# vuevuetifyfirebaseapp
 
 > A Vue.js project
 
