@@ -1,0 +1,1 @@
+This folder comprises all of the global utility components like Alert etc.
