@@ -45,9 +45,23 @@ export default {
   // Business Logic for the component
   data() {
     return {
-      sideNav: false,
-      menuItems: [
+      sideNav: false
+  }
+  },
+  computed: {
+    menuItems(){
+      let  menuItems = [
+        /*This is the menu for the unauthenticated users*/ 
         {
+          icon: 'face', title : 'Register',link: '/register'
+        },
+        {
+          icon : 'lock_open', title : 'Login', link: '/login'
+        }
+      ]
+      // Check for user authentication
+      if(this.userIsAuthenticated){
+         menuItems = [{
           icon: 'supervisor_account',title : 'View Meetups',
           link: '/meetups'
         },
@@ -56,21 +70,21 @@ export default {
         },
         {
           icon : 'person',title : 'Profile',link: '/profile'
-        },
-        {
-          icon: 'face', title : 'Register',link: '/register'
-        },
-        {
-          icon : 'lock_open', title : 'Login', link: '/login'
         }
       ]
     }
+      return menuItems
+    },
+    userIsAuthenticated(){
+      return this.$store.getters.user !== null && this.$store.getters.user !== undefined;
+    }
+    }
   }
-}
 </script>
 
 
 <style scoped>
 
 </style>
+
 
